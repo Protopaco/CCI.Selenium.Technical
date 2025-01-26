@@ -1,0 +1,12 @@
+# Auto-generated files
+*.log
+*.vspscc
+*.vssscc
+
+# Build results
+*.dll
+*.exe
+*.app
+*.pbb
+*.tmp
+*.dll
