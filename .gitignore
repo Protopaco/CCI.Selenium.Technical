@@ -10,3 +10,8 @@
 *.pbb
 *.tmp
 *.dll
+/obj
+/bin
+/.vs
+/Debug
+.DS_Store

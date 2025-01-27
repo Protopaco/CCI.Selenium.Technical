@@ -7,16 +7,20 @@ namespace CCI.Selenium.Technical.Tests
     [TestFixture]
     public class LoginTest
     {
-        private IWebDriver driver;
+        private readonly ChromeDriver driver;
         private readonly By _usernameInputXpath = By.XPath("//input[contains(@id, 'user-name')]");
         private readonly By _passwordInputXpath = By.XPath("//input[contains(@id, 'password')]");
         private readonly By _loginButtonXpath = By.XPath("//input[contains(@class, 'submit-button')]");
         private readonly By _loginErrorMessagesXpath = By.XPath("//h3[contains(@data-test, 'error')]");
 
+        public LoginTest()
+        {
+            driver = new ChromeDriver();
+        }
+
         [SetUp]
         public void Setup()
         {
-            driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl("https://www.saucedemo.com/");
         }
